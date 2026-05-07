@@ -1,6 +1,6 @@
 cask "barshelf" do
-  version "0.3.2"
-  sha256 "1ce36038e787ce2b277077f35b07f1d886a5dc6b47430ee85d9a8f7c1dc86e84"
+  version "0.3.3"
+  sha256 "627942d4aea42e2e5bdc1156b37591cf6341a128d5ef9fdf3c6b69401a8be088"
 
   url "https://github.com/gregagi/barshelf/releases/download/v#{version}/BarShelf.dmg"
   name "BarShelf"
