@@ -1,11 +1,11 @@
-# Greg AGI Homebrew Tap
+# LVTD Homebrew Tap
 
-Homebrew tap for Greg AGI macOS apps.
+Homebrew tap for LVTD macOS apps.
 
 ## BarShelf
 
 ```bash
-brew tap gregagi/tap
+brew tap lvtd-llc/tap
 brew install --cask barshelf
 ```
 
