@@ -1,6 +1,6 @@
 cask "barshelf" do
-  version "0.3.9"
-  sha256 "7a9e8615aa9dc4ee22437201776903df6057f619af5047618106b9d1b7857c7a"
+  version "0.3.10"
+  sha256 "1736e50ef287058ddecdf99b1be0d17e276f8d18bae07431cf3f57f6e73d3fc3"
 
   url "https://github.com/LVTD-LLC/barshelf/releases/download/v#{version}/BarShelf.dmg"
   name "BarShelf"
