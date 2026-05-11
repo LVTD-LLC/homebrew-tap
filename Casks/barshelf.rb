@@ -10,6 +10,12 @@ cask "barshelf" do
   app "BarShelf.app"
   binary "#{appdir}/BarShelf.app/Contents/MacOS/barshelf"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/BarShelf.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Preferences/com.gregagi.barshelf.plist",
     "~/Library/Application Support/com.gregagi.barshelf",
