@@ -8,9 +8,11 @@ class PgsandboxMcp < Formula
   sha256 "075f9769a66c2237f34926787b72aee2c5d9d55b1ed8c1bc47e8bb9fd6fbdd6b"
   license "MIT"
 
-  # The v0.1.0 release asset is a macOS arm64 native binary.
-  depends_on arch: :arm64
   depends_on :macos
+
+  on_intel do
+    disable! date: "2026-06-13", because: "v0.1.0 is only available as a macOS arm64 binary"
+  end
 
   def install
     bin.install "pgsandbox-mcp"
