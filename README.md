@@ -6,7 +6,8 @@ Homebrew tap for LVTD macOS apps and CLI tools.
 
 ```bash
 brew install LVTD-LLC/tap/pgsandbox-mcp
-pgsandbox-mcp setup --client codex --admin-url postgres://postgres:postgres@localhost:5432/postgres
+PGSANDBOX_ADMIN_DATABASE_URL="postgres://postgres:postgres@localhost:5432/postgres"
+pgsandbox-mcp setup --client codex --admin-url "$PGSANDBOX_ADMIN_DATABASE_URL"
 ```
 
 Upgrade later:
