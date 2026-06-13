@@ -8,6 +8,8 @@ Homebrew tap for LVTD macOS apps and CLI tools.
 brew install LVTD-LLC/tap/pgsandbox-mcp
 ```
 
+The v0.1.0 formula installs the macOS arm64 release artifact.
+
 After starting a local Postgres instance, register the MCP server with your MCP client:
 
 ```bash
