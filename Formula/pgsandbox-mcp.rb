@@ -4,8 +4,8 @@
 class PgsandboxMcp < Formula
   desc "MCP server for disposable Postgres sandboxes"
   homepage "https://github.com/LVTD-LLC/pgsandbox-mcp"
-  url "https://github.com/LVTD-LLC/pgsandbox-mcp/releases/download/v0.1.1/pgsandbox-mcp-0.1.1.tar.gz"
-  sha256 "e8d8bc689965a3296abd22f9bd92d29da0cd577d732c74fc82a9da71b834e84b"
+  url "https://github.com/LVTD-LLC/pgsandbox-mcp/releases/download/v0.1.3/pgsandbox-mcp-0.1.3.tar.gz"
+  sha256 "c860242a18eb2d564cc23f0fdfa3c9cd30f62854aae2dcbdf55f956d435392dc"
   license "MIT"
 
   depends_on :macos
