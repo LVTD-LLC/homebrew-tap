@@ -11,7 +11,7 @@ class PgsandboxMcp < Formula
   depends_on :macos
 
   on_intel do
-    disable! date: "2026-06-13", because: "v0.1.0 is only available as a macOS arm64 binary"
+    disable! date: "2026-06-13", because: "only macOS arm64 release archives are published"
   end
 
   def install
