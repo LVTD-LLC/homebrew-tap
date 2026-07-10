@@ -2,18 +2,18 @@
 
 Homebrew tap for LVTD apps and CLI tools.
 
-## PGSandbox MCP
+## PGSandbox
 
 ```bash
-brew install LVTD-LLC/tap/pgsandbox-mcp
+brew install LVTD-LLC/tap/pgsandbox
 ```
 
 This formula currently installs the macOS arm64 release artifact.
 
-After starting Postgres, register the MCP server:
+Register the MCP server:
 
 ```bash
-pgsandbox-mcp setup --client codex --admin-url "$PGSANDBOX_ADMIN_DATABASE_URL"
+pgsandbox setup --client codex
 ```
 
 ## BarShelf
