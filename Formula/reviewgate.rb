@@ -4,8 +4,8 @@
 class Reviewgate < Formula
   desc "Score-centered PR review gate for agent-written code"
   homepage "https://reviewgate.lvtd.dev"
-  url "https://github.com/LVTD-LLC/reviewgate/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "d9f0e3ed4098bacbc1925d995d59dbc5ab4c114deef380f0af905c28358238e5"
+  url "https://github.com/LVTD-LLC/reviewgate/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "60e92cf60915ba170c001b1343e39780a9d988804014bb94c2c626775c35ee90"
   license "Apache-2.0"
 
   depends_on "rust" => :build
