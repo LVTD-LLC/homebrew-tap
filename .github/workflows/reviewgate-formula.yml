@@ -1,0 +1,41 @@
+name: ReviewGate formula
+
+on:
+  pull_request:
+    paths:
+      - Formula/reviewgate.rb
+      - .github/workflows/reviewgate-formula.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install-and-upgrade:
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          persist-credentials: false
+      - name: Install current formula
+        run: |
+          brew tap lvtd-llc/tap
+          brew install lvtd-llc/tap/reviewgate
+          reviewgate --help
+      - name: Upgrade to proposed formula
+        run: |
+          tap_dir="$(brew --repository lvtd-llc/tap)"
+          cp Formula/reviewgate.rb "$tap_dir/Formula/reviewgate.rb"
+          brew upgrade lvtd-llc/tap/reviewgate
+          brew test lvtd-llc/tap/reviewgate
+          brew list --versions lvtd-llc/tap/reviewgate
+      - name: Clean install proposed formula
+        run: |
+          brew uninstall lvtd-llc/tap/reviewgate
+          brew install lvtd-llc/tap/reviewgate
+          brew test lvtd-llc/tap/reviewgate
+          reviewgate --help
