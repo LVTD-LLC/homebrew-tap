@@ -2,31 +2,15 @@
 
 Homebrew tap for LVTD apps and CLI tools.
 
-## ReviewGate
+## nitpick
+
+AI code review for AI agents. Sends your git diff plus the relevant repo context to any OpenRouter or local model and prints structured findings.
 
 ```bash
-brew install LVTD-LLC/tap/reviewgate
+brew install LVTD-LLC/tap/nitpick
 ```
 
-Upgrade later with:
-
-```bash
-reviewgate upgrade
-```
-
-## PGSandbox
-
-```bash
-brew install LVTD-LLC/tap/pgsandbox
-```
-
-This formula currently installs the macOS arm64 release artifact.
-
-Register the MCP server:
-
-```bash
-pgsandbox setup --client codex
-```
+Builds from source, so the first install takes a few minutes. Then set `NITPICK_OPENROUTER_API_KEY` and run `nitpick` in any git repo. Docs: https://github.com/LVTD-LLC/nitpick
 
 ## BarShelf
 
