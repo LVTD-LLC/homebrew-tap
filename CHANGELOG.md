@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-01
+
+- Add djass v0.1.0 (prebuilt CLI archives from djass.dev for macOS and Linux, arm64 and x86_64).
+
 ## 2026-09-30
 
 - Add nitpick v0.1.0 (builds from the tagged source tarball).
