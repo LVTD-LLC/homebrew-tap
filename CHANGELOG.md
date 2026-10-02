@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-02
+
+- Update nitpick to v0.2.0: `nitpick watch`, background review driven by the coding agent's hooks (Claude Code, Codex, Cursor, pi, OpenCode, OpenClaw).
+
 ## 2026-10-01
 
 - Add djass v0.1.0 (prebuilt CLI archives from djass.dev for macOS and Linux, arm64 and x86_64).
