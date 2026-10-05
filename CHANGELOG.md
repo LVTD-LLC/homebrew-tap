@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-05
+
+- Update nitpick to v0.3.0: verified global Codex setup, advisory background review by default, and review in folders without Git.
+
 ## 2026-10-02
 
 - Update nitpick to v0.2.0: `nitpick watch`, background review driven by the coding agent's hooks (Claude Code, Codex, Cursor, pi, OpenCode, OpenClaw).
