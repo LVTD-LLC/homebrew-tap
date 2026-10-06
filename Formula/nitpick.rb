@@ -4,8 +4,8 @@
 class Nitpick < Formula
   desc "AI code review for AI agents, via OpenRouter or a local model"
   homepage "https://nitpick.sh"
-  url "https://github.com/LVTD-LLC/nitpick/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "aeba933e813cccdb0e7357e4c0216c825f72db33acdf0d01f3465161ceb3ce15"
+  url "https://github.com/LVTD-LLC/nitpick/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "dd2e5b8ba498e7103732e79b5d2ad687cd80b36fe35ddd01288d5423a03c1c40"
   license "MIT"
   head "https://github.com/LVTD-LLC/nitpick.git", branch: "main"
 

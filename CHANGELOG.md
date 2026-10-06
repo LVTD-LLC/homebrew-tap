@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-06
+
+- Update nitpick to v0.3.1: with the Claude Code plugin enabled, `watch install claude` no longer adds duplicate hooks, and a leftover copy is removed automatically.
+
 ## 2026-10-05
 
 - Update nitpick to v0.3.0: verified global Codex setup, advisory background review by default, and review in folders without Git.
