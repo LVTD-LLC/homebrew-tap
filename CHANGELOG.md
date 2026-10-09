@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-09
+
+- Update nitpick to v0.3.2 with verified source checksum, privacy-limited PostHog telemetry build configuration, and an installation caveat documenting opt-out. The embedded token is public and write-only.
+
 ## 2026-10-06
 
 - Update nitpick to v0.3.1: with the Claude Code plugin enabled, `watch install claude` no longer adds duplicate hooks, and a leftover copy is removed automatically.
