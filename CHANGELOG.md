@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-20
+
+- Update nitpick to v0.3.3. The formula test checks that a one-token context budget preserves the patch for a new file.
+
 ## 2026-10-09
 
 - Update nitpick to v0.3.2 with verified source checksum, privacy-limited PostHog telemetry build configuration, and an installation caveat documenting opt-out. The embedded token is public and write-only.

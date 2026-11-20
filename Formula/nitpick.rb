@@ -4,8 +4,8 @@
 class Nitpick < Formula
   desc "AI code review for AI agents, via OpenRouter or a local model"
   homepage "https://nitpick.sh"
-  url "https://github.com/LVTD-LLC/nitpick/archive/refs/tags/v0.3.2.tar.gz"
-  sha256 "943b070665eec19567974187b5d0e253ed82a42016524c8b851ce3d7845447f0"
+  url "https://github.com/LVTD-LLC/nitpick/archive/refs/tags/v0.3.3.tar.gz"
+  sha256 "be610fa0b3c34e6670fe7e5f8ba11e048859ef5eb28670e4948a549e9e0e415a"
   license "MIT"
   head "https://github.com/LVTD-LLC/nitpick.git", branch: "main"
 
@@ -26,7 +26,22 @@ class Nitpick < Formula
   end
 
   test do
+    require "json"
+
+    ENV["NITPICK_TELEMETRY"] = "0"
     assert_match "AI code review for AI agents", shell_output("#{bin}/nitpick --help")
     assert_match version.to_s, shell_output("#{bin}/nitpick --version")
+
+    system "git", "init", "-q"
+    system "git", "config", "diff.mnemonicPrefix", "true"
+    system "git", "-c", "user.name=Nitpick", "-c", "user.email=test@example.org",
+           "commit", "-q", "--allow-empty", "-m", "base"
+    (testpath/"new.py").write("answer = 41\nanswer += 1\n")
+
+    pack = JSON.parse(shell_output("#{bin}/nitpick context --json --budget 1"))
+    file = pack.fetch("files").fetch(0)
+    assert_equal "new.py", file.fetch("path")
+    assert_nil file.fetch("listing")
+    assert_includes pack.fetch("diff_text"), "@@ -0,0 +1,2 @@\n+answer = 41\n+answer += 1"
   end
 end
