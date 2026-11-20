@@ -38,7 +38,7 @@ class Nitpick < Formula
            "commit", "-q", "--allow-empty", "-m", "base"
     (testpath/"new.py").write("answer = 41\nanswer += 1\n")
 
-    pack = JSON.parse(shell_output("#{bin}/nitpick context --json --budget 1"))
+    pack = JSON.parse(shell_output("#{bin}/nitpick context --json --budget 1 new.py"))
     file = pack.fetch("files").fetch(0)
     assert_equal "new.py", file.fetch("path")
     assert_nil file.fetch("listing")
